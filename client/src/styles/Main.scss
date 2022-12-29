@@ -1,0 +1,93 @@
+.cropper-view-box {
+  border-radius: 50% !important;
+}
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+
+$my-theme-colors: (
+  'brand': #ee5e47,
+  'brand-secondary': #ffdc7c,
+);
+
+$theme-colors: map-merge($theme-colors, $my-theme-colors);
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import './pages/Home.scss';
+@import './pages/Profile.scss';
+@import './components/Post.scss';
+@import './components/UserCard.scss';
+@import './components/Navbar.scss';
+@import './components/DiscoverUser.scss';
+@import './components/ProfilePictureModal.scss';
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.ws-pre-line {
+  white-space: pre-line;
+}
+
+.sh-1 {
+  box-shadow: 0px 20px 26px -25px rgba(0, 0, 0, 0.5);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.d-text-underline {
+  &:hover {
+    text-decoration-line: underline;
+  }
+}
+
+.display-5 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-7 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eeeeee;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbcbcb;
+}
+
+.page {
+  padding: 75px 0 0 0;
+  min-width: 0;
+  height: 100vh;
+}
+
+@include media-breakpoint-up(md) {
+  .page {
+    padding: 0 75px 0 0;
+  }
+}

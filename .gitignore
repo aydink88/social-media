@@ -1,0 +1,6 @@
+/client/node_modules
+/client/dist
+/api/.env
+
+/design
+/node_modules

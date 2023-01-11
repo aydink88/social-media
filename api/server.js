@@ -6,7 +6,11 @@ const compression = require("compression");
 const cors = require("cors");
 const path = require("path");
 
-dotenv.config({ path: path.resolve(__dirname, ".env") });
+if (process.env.NODE_ENV!=="production") {
+  dotenv.config({ path: path.resolve(__dirname, ".env") });
+
+}
+
 
 require("./db/mongoose");
 
